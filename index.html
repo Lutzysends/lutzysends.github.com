@@ -3,49 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LutzySends</title>
     <link rel="stylesheet" href="styles.css">
+    <title>Lutzys Cars - Home</title>
 </head>
 <body>
     <header>
-        <h1>Welcome to LutzySends</h1>
+        <h1>Lutzys Cars</h1>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="cars.html">Cars for Sale</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
     </header>
-    <main id="home">
-        <section>
-            <h2>About Us</h2>
-            <p>LutzySends provides top-notch delivery services to ensure your packages arrive on time, every time.</p>
+
+    <main>
+        <section class="hero">
+            <h2>Your Dream Car Awaits!</h2>
+            <img src="images/car1.jpg" alt="Lutzys Cars">
         </section>
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <form id="contactForm">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
-        <section id="testimonials">
-            <h2>What Our Clients Say</h2>
-            <div id="testimonialContainer">
-                <!-- Testimonials will be added here dynamically -->
+        <section class="featured-cars">
+            <h2>Featured Cars</h2>
+            <div class="car-grid">
+                <img src="images/car2.jpg" alt="Car 2">
+                <img src="images/car3.jpg" alt="Car 3">
             </div>
-            <button id="addTestimonialBtn">Add Testimonial</button>
         </section>
     </main>
+
     <footer>
-        <p>&copy; 2024 LutzySends. All rights reserved.</p>
+        <p>&copy; 2023 Lutzys Cars. All rights reserved.</p>
     </footer>
-    <script src="scripts.js"></script>
 </body>
 </html>
