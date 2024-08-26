@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+header {
+    background-color: #343a40;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.hero img {
+    max-width: 80%;
+    height: auto;
+}
+
+.featured-cars,
+.cars-for-sale {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.car-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.car-grid img {
+    width: 200px;
+    height: auto;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #343a40;
+    color: white;
+}
+
+.about, .contact {
+    text-align: center;
+    padding: 20px;
+}
+
+.about img {
+    max-width: 70%;
+    height: auto;
+}
