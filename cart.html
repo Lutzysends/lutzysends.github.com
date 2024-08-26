@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Shopping Cart - Lutzys Cars</title>
+</head>
+<body>
+    <header>
+        <h1>Lutzys Cars</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="cars.html">Cars for Sale</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cart">
+            <h2>Your Shopping Cart</h2>
+            <div id="cart-items"></div>
+            <h3>Total Price: $<span id="total-price">0.00</span></h3>
+            <button onclick="checkout()">Checkout</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2023 Lutzys Cars. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
