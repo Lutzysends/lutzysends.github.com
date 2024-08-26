@@ -3,7 +3,9 @@
   ├── about.html
   ├── cars.html
   ├── contact.html
+  ├── cart.html
   ├── styles.css
+  ├── script.js
   └── images/
       ├── car1.jpg
       ├── car2.jpg
