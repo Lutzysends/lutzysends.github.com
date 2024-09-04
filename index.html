@@ -45,6 +45,13 @@
             border-radius: 5px;
             padding: 10px;
             margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+        .item img {
+            width: 100px; /* Adjust the width as necessary */
+            height: auto; /* Maintain aspect ratio */
+            margin-right: 20px; /* Spacing between image and text */
         }
         button {
             padding: 10px 15px;
@@ -89,24 +96,36 @@
         <section id="items">
             <h2>Furniture Items Available</h2>
             <div class="item">
-                <h3>Sofa Set</h3>
-                <p>Price: $799.99</p>
-                <button onclick="addToCart('Sofa Set', 799.99)">Add to Cart</button>
+                <img src="images/sofa-set.jpg" alt="Sofa Set"> <!-- Add image path -->
+                <div>
+                    <h3>Sofa Set</h3>
+                    <p>Price: $799.99</p>
+                    <button onclick="addToCart('Sofa Set', 799.99)">Add to Cart</button>
+                </div>
             </div>
             <div class="item">
-                <h3>Dining Table</h3>
-                <p>Price: $499.99</p>
-                <button onclick="addToCart('Dining Table', 499.99)">Add to Cart</button>
+                <img src="images/dining-table.jpg" alt="Dining Table"> <!-- Add image path -->
+                <div>
+                    <h3>Dining Table</h3>
+                    <p>Price: $499.99</p>
+                    <button onclick="addToCart('Dining Table', 499.99)">Add to Cart</button>
+                </div>
             </div>
             <div class="item">
-                <h3>Coffee Table</h3>
-                <p>Price: $199.99</p>
-                <button onclick="addToCart('Coffee Table', 199.99)">Add to Cart</button>
+                <img src="images/coffee-table.jpg" alt="Coffee Table"> <!-- Add image path -->
+                <div>
+                    <h3>Coffee Table</h3>
+                    <p>Price: $199.99</p>
+                    <button onclick="addToCart('Coffee Table', 199.99)">Add to Cart</button>
+                </div>
             </div>
             <div class="item">
-                <h3>Bookshelf</h3>
-                <p>Price: $299.99</p>
-                <button onclick="addToCart('Bookshelf', 299.99)">Add to Cart</button>
+                <img src="images/bookshelf.jpg" alt="Bookshelf"> <!-- Add image path -->
+                <div>
+                    <h3>Bookshelf</h3>
+                    <p>Price: $299.99</p>
+                    <button onclick="addToCart('Bookshelf', 299.99)">Add to Cart</button>
+                </div>
             </div>
         </section>
 
