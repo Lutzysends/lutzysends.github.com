@@ -35,3 +35,20 @@
     </footer>
 </body>
 </html>
+<script>
+    const cart = [];
+
+    function addToCart(productName, productPrice) {
+        cart.push({ name: productName, price: productPrice });
+        alert(`${productName} has been added to your cart!`);
+    }
+
+    document.querySelectorAll('.product-card button').forEach(button => {
+        button.addEventListener('click', (e) => {
+            const productCard = e.target.parentElement;
+            const productName = productCard.querySelector('h3').textContent;
+            const productPrice = productCard.querySelector('p').textContent;
+            addToCart(productName, productPrice);
+        });
+    });
+</script>
