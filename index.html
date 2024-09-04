@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Furniture Store</title>
+    <link rel="stylesheet" href="styles/styles.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -39,14 +40,11 @@
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        footer {
-            text-align: center;
+        .item {
+            border: 1px solid #ccc;
+            border-radius: 5px;
             padding: 10px;
-            background: #333;
-            color: #fff;
-            position: relative;
-            bottom: 0;
-            width: 100%;
+            margin: 10px 0;
         }
         button {
             padding: 10px 15px;
@@ -59,6 +57,15 @@
         button:hover {
             background: #218838;
         }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
     </style>
 </head>
 <body>
@@ -67,6 +74,7 @@
         <nav>
             <ul>
                 <li><a href="#about">About Us</a></li>
+                <li><a href="#items">Furniture Items</a></li>
                 <li><a href="#cart">Your Cart</a></li>
                 <li><a href="#contact">Contact Us</a></li>
             </ul>
@@ -78,13 +86,34 @@
             <p>Established in 2023, our furniture store caters to all your home furnishing needs. We pride ourselves on providing quality products and excellent customer service.</p>
         </section>
         
+        <section id="items">
+            <h2>Furniture Items Available</h2>
+            <div class="item">
+                <h3>Sofa Set</h3>
+                <p>Price: $799.99</p>
+                <button onclick="addToCart('Sofa Set', 799.99)">Add to Cart</button>
+            </div>
+            <div class="item">
+                <h3>Dining Table</h3>
+                <p>Price: $499.99</p>
+                <button onclick="addToCart('Dining Table', 499.99)">Add to Cart</button>
+            </div>
+            <div class="item">
+                <h3>Coffee Table</h3>
+                <p>Price: $199.99</p>
+                <button onclick="addToCart('Coffee Table', 199.99)">Add to Cart</button>
+            </div>
+            <div class="item">
+                <h3>Bookshelf</h3>
+                <p>Price: $299.99</p>
+                <button onclick="addToCart('Bookshelf', 299.99)">Add to Cart</button>
+            </div>
+        </section>
+
         <section id="cart">
             <h2>Items in Your Cart</h2>
-            <ul>
-                <li>Sofa Set - $799.99</li>
-                <li>Dining Table - $499.99</li>
-            </ul>
-            <h3>Total: $1,299.98</h3>
+            <ul id="cartItems"></ul>
+            <h3>Total: $<span id="totalPrice">0.00</span></h3>
             <button>Checkout</button>
         </section>
 
@@ -106,5 +135,28 @@
     <footer>
         <p>© 2023 Furniture Store. All Rights Reserved.</p>
     </footer>
+    <script>
+        let cart = [];
+        let total = 0;
+
+        function addToCart(itemName, itemPrice) {
+            cart.push({ name: itemName, price: itemPrice });
+            total += itemPrice;
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartItemsContainer = document.getElementById('cartItems');
+            const totalPriceElement = document.getElementById('totalPrice');
+
+            cartItemsContainer.innerHTML = '';
+            cart.forEach((item) => {
+                const li = document.createElement('li');
+                li.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+                cartItemsContainer.appendChild(li);
+            });
+            totalPriceElement.textContent = total.toFixed(2);
+        }
+    </script>
 </body>
 </html>
