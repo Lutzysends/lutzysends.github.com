@@ -1,9 +1,11 @@
 furniture-store/
-├── index.html
-├── about.html
-├── products.html
-├── contact.html
-├── cart.html
-├── styles/
-│   └── styles.css
-└── images/
+│
+├── index.html              
+│
+├── styles/                 
+│   └── styles.css          
+├── images/                 
+│   └── logo.png          
+│
+└── scripts/                 
+    └── main.js   
